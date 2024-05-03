@@ -1993,6 +1993,12 @@ namespace MCDA_APP.Forms
 
             Controls.Add(malcoreFooter);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HexDump hexDump = new HexDump();
+            hexDump.Show();
+        }
     }
 
     public class FileNameData

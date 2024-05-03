@@ -70,6 +70,7 @@
             notifyIcon1 = new NotifyIcon(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
             exitToolStripMenuItem = new ToolStripMenuItem();
+            button1 = new Button();
             monitoringFlowLayoutPanel.SuspendLayout();
             queuePanel.SuspendLayout();
             panelInactive.SuspendLayout();
@@ -455,12 +456,28 @@
             exitToolStripMenuItem.Text = "Quit Malcore Agent";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(26, 26, 34);
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(512, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(85, 31);
+            button1.TabIndex = 40;
+            button1.Text = "HexDump";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // MonitoringForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 26, 34);
             ClientSize = new Size(830, 517);
+            Controls.Add(button1);
             Controls.Add(panelInactive);
             Controls.Add(monitoringFlowLayoutPanel);
             Controls.Add(btnLogout);
@@ -554,5 +571,6 @@
         private Panel queuePanel;
         private Label labelQueuedFiles;
         private Button btnViewQueue;
+        private Button button1;
     }
 }
